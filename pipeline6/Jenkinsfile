@@ -13,7 +13,7 @@ pipeline {
             agent {label 'main'}
             steps {
                 sh '''
-                    ./pipeline6/jenkins/build/mvn.sh mvn -B -DskipTests clean package
+                    /pipeline6/jenkins/build/mvn.sh mvn -B -DskipTests clean package
                     ./pipeline6/jenkins/build/build.sh
                 '''
             }
