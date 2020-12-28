@@ -1,6 +1,4 @@
-#!/bin/bash
 
-# Copy the new jar to the build location
 cp -fv pipeline6/java-app/target/*.jar pipeline6/jenkins/build/
 echo "copied"
 ls -la pipeline6/jenkins/build/
