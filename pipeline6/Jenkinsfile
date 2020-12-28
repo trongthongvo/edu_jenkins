@@ -4,7 +4,7 @@ pipeline {
     //agent {label 'mynode2'}
     
     environment {
-        PASS = credentials('registry-pass') 
+        PASS = credentials('password-docker-hub-trongthongvo') 
     }
 
     stages {
