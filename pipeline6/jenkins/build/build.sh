@@ -9,4 +9,7 @@ echo "****************************"
 
 pwd
 ls -la
-cd pipeline6/jenkins/build/ && docker-compose -f docker-compose-build.yml build #--no-cache
+cd pipeline6/jenkins/build
+pwd
+ls -la
+docker-compose -f docker-compose-build.yml build #--no-cache
