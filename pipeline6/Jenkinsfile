@@ -5,6 +5,7 @@ pipeline {
     
     environment {
         PASS = credentials('password-docker-hub-trongthongvo') 
+        PATH = "$PATH:/usr/local/bin/"
     }
 
     stages {
