@@ -8,4 +8,4 @@ echo "PASS is private" $PASS
 docker login -u trongthongvo -p $PASS
 pwd
 ls -la
-cd ~/maven && docker-compose up -d
+docker-compose up -d
