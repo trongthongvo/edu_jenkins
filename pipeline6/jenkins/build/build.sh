@@ -12,7 +12,6 @@ ls -la
 cd pipeline6/jenkins/build/
 pwd
 ls -la
-docker ps -a
-docker images
+
 docker-compose --version
 docker-compose -f docker-compose-build.yml build #--no-cache
