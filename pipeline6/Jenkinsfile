@@ -13,8 +13,8 @@ pipeline {
             agent {label 'main'}
             steps {
                 sh '''
-                    ./var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/build/mvn.sh mvn -B -DskipTests clean package
-                    ./var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/build/build.sh
+                    /var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/build/mvn.sh mvn -B -DskipTests clean package
+                    /var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/build/build.sh
                 '''
             }
 
@@ -41,14 +41,14 @@ pipeline {
         stage('Push') {
             agent {label 'main'}
             steps {
-                sh './var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/push/push.sh'
+                sh '/var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/push/push.sh'
             }
         }
 
         stage('Deploy') {
             agent {label 'mynode02'}
             steps {
-                sh './var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/deploy/deploy.sh'
+                sh '/var/lib/jenkins/workspace/pipeline-maven/pipeline6/jenkins/deploy/deploy.sh'
             }
         }
     }
